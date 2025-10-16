@@ -38,7 +38,7 @@ def process_documents():
         # Определяем номер строки, с которой надо начинать запись
         book = load_workbook(output_path)
         sheet = book[sheet_name]
-        startrow = 1
+        startrow = 2
         while sheet[f"A{startrow}"].value is not None:
             startrow += 1
 
@@ -61,7 +61,7 @@ def process_documents():
             continue  # пропускаем файл
 
 
-        existing_headers = [cell.value for cell in sheet[1] if cell.value is not None]
+        existing_headers = [cell.value for cell in sheet[2] if cell.value is not None]
         # Определяем "лишние" колонки, которые есть в df, но отсутствуют в Excel
         missing_columns = [col for col in df_to_add.columns if col not in existing_headers]
 

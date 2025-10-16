@@ -65,6 +65,8 @@ def parse_second_table(filepath: str) -> pd.DataFrame:
     targets = ['Approved by Not approved',
                'Approved by Head of Laboratory',
                'Checked by Technician laboratory assistant',
+               'Checked by Laboratory assistant',
+               'Checked by Deputy Chief of the Chromatography Department'
                'Weighted average',
                'Checked by Deputy Chief of the Basic Chemistry Department',
                'Conclusion',
